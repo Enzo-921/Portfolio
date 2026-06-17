@@ -3,8 +3,24 @@ const root = document.documentElement;
 const themeToggle = document.querySelector(".theme-toggle");
 const themeIcon = themeToggle ? themeToggle.querySelector("i") : null;
 
+function readSavedTheme() {
+    try {
+        return localStorage.getItem("portfolio-theme");
+    } catch {
+        return null;
+    }
+}
+
+function saveTheme(theme) {
+    try {
+        localStorage.setItem("portfolio-theme", theme);
+    } catch {
+        // Le thème reste actif même si le navigateur refuse la sauvegarde.
+    }
+}
+
 function getInitialTheme() {
-    const savedTheme = localStorage.getItem("portfolio-theme");
+    const savedTheme = readSavedTheme();
 
     if (savedTheme === "light" || savedTheme === "dark") {
         return savedTheme;
@@ -24,7 +40,8 @@ function applyTheme(theme) {
 
     themeToggle.setAttribute("aria-label", isDark ? "Passer au mode clair" : "Passer au mode sombre");
     themeToggle.setAttribute("title", isDark ? "Passer au mode clair" : "Passer au mode sombre");
-    themeIcon.className = isDark ? "fa-solid fa-sun" : "fa-solid fa-moon";
+    themeIcon.classList.toggle("fa-moon", !isDark);
+    themeIcon.classList.toggle("fa-sun", isDark);
 }
 
 applyTheme(getInitialTheme());
@@ -33,7 +50,7 @@ if (themeToggle) {
     themeToggle.addEventListener("click", () => {
         const nextTheme = root.dataset.theme === "dark" ? "light" : "dark";
 
-        localStorage.setItem("portfolio-theme", nextTheme);
+        saveTheme(nextTheme);
         applyTheme(nextTheme);
     });
 }
