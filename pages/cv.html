@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CV d'Enzo Chauderon.">
+    <title>CV - Portfolio Enzo</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/shared.css">
+    <link rel="stylesheet" href="../css/cv.css">
+
+    <script src="../js/shared.js" defer></script>
+</head>
+<body>
+    <div id="scroll-bar"></div>
+    <canvas id="space-canvas" aria-hidden="true"></canvas>
+
+    <header class="site-header">
+        <nav class="navbar" aria-label="Navigation principale">
+            <a href="../index.html" class="nav-logo">ENZO<span>.DEV</span></a>
+            <ul class="nav-links">
+                <li><a href="../index.html"><i class="fa-solid fa-house"></i> Accueil</a></li>
+                <li><a href="projets.html"><i class="fa-solid fa-code-branch"></i> Projets</a></li>
+                <li><a href="competences.html"><i class="fa-solid fa-layer-group"></i> Compétences</a></li>
+                <li><a href="cv.html" class="active"><i class="fa-solid fa-file-lines"></i> CV</a></li>
+                <li><a href="contact.html"><i class="fa-solid fa-paper-plane"></i> Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" type="button" aria-label="Changer de thème"><i class="fa-solid fa-moon"></i></button>
+                <button class="nav-burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <p class="section-label">Parcours</p>
+                <h1>Mon <span>CV</span></h1>
+                <p>Une synthèse de mon profil, de ma formation et des compétences que je construis en BUT Informatique.</p>
+            </div>
+        </section>
+
+        <section class="cv-section">
+            <div class="container cv-layout">
+                <aside class="cv-side">
+                    <div class="cv-profile">
+                        <div class="cv-avatar">EC</div>
+                        <h2>Enzo Chauderon</h2>
+                        <p>Étudiant en BUT Informatique</p>
+                    </div>
+
+                    <div class="cv-box">
+                        <h3><i class="fa-solid fa-circle-info"></i> Contact</h3>
+                        <ul>
+                            <li>Email à compléter</li>
+                            <li>Localisation à compléter</li>
+                            <li>GitHub / LinkedIn à compléter</li>
+                        </ul>
+                    </div>
+
+                    <div class="cv-box">
+                        <h3><i class="fa-solid fa-code"></i> Stack</h3>
+                        <div class="cv-tags">
+                            <span>SQL</span><span>C</span><span>C++</span><span>C#</span><span>HTML</span><span>CSS</span><span>Réseaux</span>
+                        </div>
+                    </div>
+                </aside>
+
+                <div class="cv-main">
+                    <section class="cv-block">
+                        <h2><i class="fa-solid fa-user"></i> Profil</h2>
+                        <article>
+                            <p>
+                                Étudiant en BUT Informatique, je m'intéresse particulièrement aux systèmes,
+                                aux réseaux et à l'administration d'infrastructures. Je développe aussi des bases solides
+                                en programmation, bases de données et interfaces.
+                            </p>
+                        </article>
+                    </section>
+
+                    <section class="cv-block">
+                        <h2><i class="fa-solid fa-graduation-cap"></i> Formation</h2>
+                        <article>
+                            <span>2025 - 2026</span>
+                            <h3>BUT Informatique - 1re année</h3>
+                            <p>Développement, bases de données, algorithmique, systèmes, réseaux et projets SAE.</p>
+                        </article>
+                    </section>
+
+                    <section class="cv-block">
+                        <h2><i class="fa-solid fa-diagram-project"></i> Projets marquants</h2>
+                        <article>
+                            <span>S2</span>
+                            <h3>Puissance 4</h3>
+                            <p>Jeu avec interface, logique de partie et joueur artificiel.</p>
+                        </article>
+                        <article>
+                            <span>Réseaux</span>
+                            <h3>Calculateur de masque</h3>
+                            <p>Travail autour de l'adressage IPv4, des masques et des sous-réseaux.</p>
+                        </article>
+                        <article>
+                            <span>S1</span>
+                            <h3>Gestion forestière</h3>
+                            <p>Approches algorithmiques, fichiers CSV et traitement de données.</p>
+                        </article>
+                    </section>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="../index.html" class="nav-logo">ENZO<span>.DEV</span></a>
+                <p>CV synthétique à compléter au fil du parcours.</p>
+            </div>
+            <nav class="footer-links" aria-label="Navigation secondaire">
+                <a href="../index.html">Accueil</a>
+                <a href="projets.html">Projets</a>
+                <a href="competences.html">Compétences</a>
+                <a href="cv.html">CV</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Projets d'Enzo Chauderon en BUT Informatique.">
+    <title>Projets - Portfolio Enzo</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/shared.css">
+    <link rel="stylesheet" href="../css/projets.css">
+
+    <script src="../js/shared.js" defer></script>
+</head>
+<body>
+    <div id="scroll-bar"></div>
+    <canvas id="space-canvas" aria-hidden="true"></canvas>
+
+    <header class="site-header">
+        <nav class="navbar" aria-label="Navigation principale">
+            <a href="../index.html" class="nav-logo">ENZO<span>.DEV</span></a>
+
+            <ul class="nav-links">
+                <li><a href="../index.html"><i class="fa-solid fa-house"></i> Accueil</a></li>
+                <li><a href="projets.html" class="active"><i class="fa-solid fa-code-branch"></i> Projets</a></li>
+                <li><a href="competences.html"><i class="fa-solid fa-layer-group"></i> Compétences</a></li>
+                <li><a href="cv.html"><i class="fa-solid fa-file-lines"></i> CV</a></li>
+                <li><a href="contact.html"><i class="fa-solid fa-paper-plane"></i> Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" type="button" aria-label="Changer de thème">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <button class="nav-burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <p class="section-label">Portfolio</p>
+                <h1>Mes <span>projets</span></h1>
+                <p>
+                    Une sélection de projets réalisés pendant le BUT Informatique,
+                    entre programmation, interfaces, données et réseaux.
+                </p>
+            </div>
+        </section>
+
+        <section class="projects-section">
+            <div class="container projects-grid">
+                <article class="project-card">
+                    <div class="project-visual visual-puissance4">
+                        <span>SAE 2.1 / 2.2</span>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-tags">
+                            <span>C#</span><span>IHM</span><span>POO</span>
+                        </div>
+                        <h2>Puissance 4</h2>
+                        <p>
+                            Développement d'un jeu Puissance 4 avec interface, logique de partie
+                            et réflexion autour d'un joueur artificiel.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-visual visual-network">
+                        <span>Réseaux</span>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-tags">
+                            <span>IPv4</span><span>Masque</span><span>Sous-réseaux</span>
+                        </div>
+                        <h2>Calculateur de masque</h2>
+                        <p>
+                            Outil autour de l'adressage IPv4 pour travailler les masques,
+                            les sous-réseaux et les plages d'adresses.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-visual visual-forest">
+                        <span>SAE 1.02</span>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-tags">
+                            <span>C</span><span>CSV</span><span>Algorithmique</span>
+                        </div>
+                        <h2>Gestion forestière</h2>
+                        <p>
+                            Comparaison d'approches algorithmiques autour d'un système de gestion
+                            avec lecture et sauvegarde de données.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-visual visual-notes">
+                        <span>SAE 1.01</span>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-tags">
+                            <span>C</span><span>Besoin client</span><span>Données</span>
+                        </div>
+                        <h2>Gestionnaire de notes</h2>
+                        <p>
+                            Programme répondant à un besoin client, avec structuration des données
+                            et logique applicative en langage C.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-visual visual-bd">
+                        <span>SAE 2.4</span>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-tags">
+                            <span>SQL</span><span>Base de données</span><span>Modèle</span>
+                        </div>
+                        <h2>Exploitation d'une base de données</h2>
+                        <p>
+                            Travail autour de la conception, des requêtes et de l'exploitation
+                            d'une base de données relationnelle.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-visual visual-linux">
+                        <span>Systèmes</span>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-tags">
+                            <span>Linux</span><span>VM</span><span>Outils</span>
+                        </div>
+                        <h2>Environnement Linux</h2>
+                        <p>
+                            Mise en place d'un environnement de travail sous Unix/Linux
+                            et découverte des outils essentiels.
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="../index.html" class="nav-logo">ENZO<span>.DEV</span></a>
+                <p>Portfolio personnel autour du BUT Informatique, des projets et des systèmes/réseaux.</p>
+            </div>
+            <nav class="footer-links" aria-label="Navigation secondaire">
+                <a href="../index.html">Accueil</a>
+                <a href="projets.html">Projets</a>
+                <a href="competences.html">Compétences</a>
+                <a href="cv.html">CV</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>
