@@ -224,7 +224,24 @@
             radial-gradient(circle at 56% 82%, rgba(247, 244, 238, 0.44) 0 1px, transparent 2px),
             radial-gradient(circle at 88% 72%, rgba(247, 244, 238, 0.5) 0 2px, transparent 3px);
         background-size: 420px 300px;
+        animation: starsMove 18s linear infinite;
     }
+
+@keyframes starsMove {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 80px 140px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .about-section::before {
+        animation: none;
+    }
+}
 
 .about-grid {
     display: grid;
