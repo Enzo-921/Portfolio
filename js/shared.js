@@ -15,7 +15,7 @@ function saveTheme(theme) {
     try {
         localStorage.setItem("portfolio-theme", theme);
     } catch {
-        // Le thème reste actif même si le navigateur refuse la sauvegarde.
+        return;
     }
 }
 
@@ -76,6 +76,38 @@ if (navBurger && navLinks) {
         navBurger.setAttribute("aria-expanded", String(isOpen));
     });
 }
+
+const revealElements = document.querySelectorAll(
+    ".hero-content, .hero-visual, .about-text, .about-cards, .featured-card, .page-hero .container, .project-card, .skill-category, .skill-card, .cv-side, .cv-block, .contact-card"
+);
+
+function initRevealAnimations() {
+    if (!revealElements.length) {
+        return;
+    }
+
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches || !("IntersectionObserver" in window)) {
+        revealElements.forEach((element) => element.classList.add("is-visible"));
+        return;
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.14 });
+
+    revealElements.forEach((element, index) => {
+        element.classList.add("reveal");
+        element.style.transitionDelay = `${(index % 3) * 80}ms`;
+        observer.observe(element);
+    });
+}
+
+initRevealAnimations();
 
 const canvas = document.querySelector("#space-canvas");
 

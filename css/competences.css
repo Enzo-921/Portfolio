@@ -29,7 +29,7 @@
         flex: 0 0 auto;
         border-radius: 50%;
         background: var(--rose);
-        color: var(--dark);
+        color: var(--text-on-light);
     }
 
     .category-title h2 {
@@ -55,7 +55,14 @@
     padding: 20px;
     background: var(--bg-soft);
     border: 2px dashed rgba(34, 34, 34, 0.3);
+    transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
 }
+
+    .skill-card:hover {
+        transform: translateY(-6px);
+        border-color: var(--rose);
+        box-shadow: var(--shadow);
+    }
 
     .skill-card span {
         display: inline-flex;
@@ -63,7 +70,7 @@
         padding: 0.35rem 0.7rem;
         border-radius: 999px;
         background: var(--rose-soft);
-        color: var(--dark);
+        color: var(--text-on-light);
         font-size: 0.78rem;
         font-weight: 900;
     }
