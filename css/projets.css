@@ -33,17 +33,29 @@
     background: var(--taupe);
 }
 
+    .project-visual img {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform: scale(1.02);
+        transition: transform var(--transition), filter var(--transition);
+    }
+
     .project-visual::before {
         content: "";
         position: absolute;
         inset: 0;
-        opacity: 0.65;
-        background: linear-gradient(135deg, rgba(34, 34, 34, 0.06), rgba(34, 34, 34, 0.24)), repeating-linear-gradient(0deg, transparent 0 15px, rgba(34, 34, 34, 0.08) 16px);
+        z-index: 1;
+        opacity: 0.7;
+        background: linear-gradient(135deg, rgba(34, 34, 34, 0.1), rgba(34, 34, 34, 0.34)), repeating-linear-gradient(0deg, transparent 0 15px, rgba(34, 34, 34, 0.08) 16px);
     }
 
     .project-visual span {
         position: relative;
-        z-index: 1;
+        z-index: 2;
         padding: 0.45rem 0.9rem;
         border-radius: 999px;
         background: var(--rose);
@@ -52,12 +64,56 @@
         font-weight: 900;
     }
 
+.project-card:hover .project-visual img {
+    transform: scale(1.08);
+    filter: saturate(1.05);
+}
+
+.project-visual-icon {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    color: rgba(247, 244, 238, 0.9);
+    font-size: 5.8rem;
+    text-shadow: 0 18px 42px rgba(34, 34, 34, 0.38);
+}
+
+.project-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(34, 34, 34, 0.78);
+    color: var(--text-on-dark);
+    font-size: 0.9rem;
+    font-weight: 900;
+    opacity: 0;
+    transition: opacity var(--transition);
+}
+
+    .project-overlay span {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 0;
+        background: transparent;
+        color: inherit;
+        font-size: inherit;
+    }
+
+.project-card:hover .project-overlay {
+    opacity: 1;
+}
+
 .visual-puissance4 {
-    background: radial-gradient(circle at 30% 28%, var(--rose) 0 56px, transparent 58px), var(--taupe);
+    background: radial-gradient(circle at 28% 26%, var(--rose) 0 58px, transparent 60px), linear-gradient(135deg, var(--taupe-dark), var(--dark-soft));
 }
 
 .visual-network {
-    background: radial-gradient(circle at 76% 24%, var(--rose-soft) 0 66px, transparent 68px), var(--taupe-dark);
+    background: radial-gradient(circle at 76% 24%, var(--rose-soft) 0 66px, transparent 68px), linear-gradient(135deg, var(--taupe-dark), var(--dark-soft));
 }
 
 .visual-forest {
@@ -83,6 +139,14 @@
 .visual-recueil {
     background: radial-gradient(circle at 28% 34%, var(--rose-soft) 0 58px, transparent 60px), var(--bg-soft);
 }
+
+    .visual-recueil img,
+    .visual-bd img,
+    .visual-notes img {
+        object-fit: contain;
+        padding: 34px;
+        background: rgba(247, 244, 238, 0.72);
+    }
 
 .project-body {
     flex: 1;
