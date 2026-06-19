@@ -14,6 +14,8 @@
     --border: rgba(34, 34, 34, 0.22);
     --shadow: 0 24px 60px rgba(34, 34, 34, 0.14);
     --header-bg: rgba(247, 244, 238, 0.86);
+    --star-strong: rgba(34, 34, 34, 0.28);
+    --star-soft: rgba(34, 34, 34, 0.16);
     --radius: 18px;
     --transition: 0.25s ease;
     --transition-slow: 0.7s ease;
@@ -36,6 +38,8 @@
     --border: rgba(247, 244, 238, 0.18);
     --shadow: 0 24px 70px rgba(0, 0, 0, 0.36);
     --header-bg: rgba(17, 19, 26, 0.86);
+    --star-strong: rgba(247, 244, 238, 0.68);
+    --star-soft: rgba(247, 244, 238, 0.34);
     color-scheme: dark;
 }
 
@@ -81,6 +85,80 @@ button {
 .container {
     width: min(1120px, calc(100% - 32px));
     margin: 0 auto;
+}
+
+.star-surface {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    --surface-star-strong: var(--star-strong);
+    --surface-star-soft: var(--star-soft);
+}
+
+    .star-surface > * {
+        position: relative;
+        z-index: 1;
+    }
+
+    .star-surface::before,
+    .star-surface::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        pointer-events: none;
+    }
+
+    .star-surface::before {
+        opacity: 0.48;
+        background:
+            radial-gradient(circle at 8% 14%, var(--surface-star-strong) 0 2px, transparent 3px),
+            radial-gradient(circle at 26% 35%, var(--surface-star-soft) 0 1px, transparent 2px),
+            radial-gradient(circle at 48% 20%, var(--surface-star-strong) 0 2px, transparent 3px),
+            radial-gradient(circle at 74% 30%, var(--surface-star-soft) 0 1px, transparent 2px),
+            radial-gradient(circle at 92% 18%, var(--surface-star-strong) 0 2px, transparent 3px),
+            radial-gradient(circle at 18% 78%, var(--surface-star-soft) 0 2px, transparent 3px),
+            radial-gradient(circle at 56% 82%, var(--surface-star-soft) 0 1px, transparent 2px),
+            radial-gradient(circle at 88% 72%, var(--surface-star-strong) 0 2px, transparent 3px);
+        background-size: 430px 310px;
+        animation: starFieldMove 26s linear infinite;
+    }
+
+    .star-surface::after {
+        opacity: 0.24;
+        background:
+            radial-gradient(circle at 12% 44%, var(--surface-star-strong) 0 1px, transparent 2px),
+            radial-gradient(circle at 38% 12%, var(--surface-star-soft) 0 1px, transparent 2px),
+            radial-gradient(circle at 64% 46%, var(--surface-star-strong) 0 2px, transparent 3px),
+            radial-gradient(circle at 82% 84%, var(--surface-star-soft) 0 1px, transparent 2px),
+            radial-gradient(circle at 30% 88%, var(--surface-star-soft) 0 2px, transparent 3px);
+        background-size: 260px 220px;
+        animation: starFieldMoveSoft 36s linear infinite;
+    }
+
+.star-surface-dark {
+    --surface-star-strong: rgba(247, 244, 238, 0.78);
+    --surface-star-soft: rgba(247, 244, 238, 0.42);
+}
+
+@keyframes starFieldMove {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 120px 180px;
+    }
+}
+
+@keyframes starFieldMoveSoft {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: -90px 130px;
+    }
 }
 
 .site-header {
