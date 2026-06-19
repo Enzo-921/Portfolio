@@ -107,6 +107,7 @@ button {
         inset: 0;
         z-index: 0;
         pointer-events: none;
+        will-change: background-position;
     }
 
     .star-surface::before {
@@ -147,7 +148,7 @@ button {
     }
 
     to {
-        background-position: 120px 180px;
+        background-position: 430px 310px;
     }
 }
 
@@ -157,7 +158,7 @@ button {
     }
 
     to {
-        background-position: -90px 130px;
+        background-position: -260px 220px;
     }
 }
 
