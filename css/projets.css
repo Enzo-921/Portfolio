@@ -11,6 +11,8 @@
 
 .project-card {
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
     background: var(--bg);
     border: 1px solid var(--border);
     transition: transform var(--transition), box-shadow var(--transition);
@@ -74,7 +76,16 @@
     background: radial-gradient(circle at 42% 28%, var(--rose-soft) 0 50px, transparent 52px), var(--taupe-dark);
 }
 
+.visual-si {
+    background: radial-gradient(circle at 70% 26%, var(--rose) 0 62px, transparent 64px), var(--taupe);
+}
+
+.visual-recueil {
+    background: radial-gradient(circle at 28% 34%, var(--rose-soft) 0 58px, transparent 60px), var(--bg-soft);
+}
+
 .project-body {
+    flex: 1;
     padding: 24px;
 }
 
