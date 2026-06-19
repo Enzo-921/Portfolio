@@ -64,28 +64,49 @@
         box-shadow: var(--shadow);
     }
 
-    .skill-card:hover .skill-icon {
-        transform: translateY(-3px) scale(1.04);
-        background: var(--rose);
-    }
+        .skill-card:hover .skill-icon {
+            transform: translateY(-3px) scale(1.04);
+            background: var(--rose);
+        }
 
-    .skill-card:hover .skill-icon i {
-        color: var(--text-on-light);
-    }
+            .skill-card:hover .skill-icon i {
+                color: var(--text-on-light);
+            }
+
+            .skill-card:hover .skill-icon img {
+                filter: none;
+            }
 
     .skill-card .skill-icon {
         width: 52px;
         height: 52px;
-        display: grid;
-        place-items: center;
+        min-width: 52px;
+        min-height: 52px;
+        max-width: 52px;
+        max-height: 52px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         margin-bottom: 16px;
         border: 1px solid var(--border);
         border-radius: 12px;
         background: var(--bg);
         color: var(--rose);
         font-size: 1.45rem;
+        overflow: hidden;
         transition: transform var(--transition), background var(--transition), color var(--transition);
     }
+
+        .skill-card .skill-icon > img.skill-img {
+            width: 28px !important;
+            height: 28px !important;
+            max-width: 28px !important;
+            max-height: 28px !important;
+            object-fit: contain !important;
+            display: block !important;
+            position: static !important;
+            transform: none !important;
+        }
 
     .skill-card span {
         display: inline-flex;
