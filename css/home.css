@@ -207,38 +207,65 @@
     isolation: isolate;
     overflow: hidden;
     padding: 88px 0;
-    background: radial-gradient(circle at 16% 24%, rgba(209, 168, 160, 0.18) 0 120px, transparent 122px), linear-gradient(135deg, #11131a 0%, #1f1b1a 100%);
+    background: linear-gradient(135deg, #101116 0%, #1f1b1a 100%);
     border-top: 3px solid var(--dark);
     border-bottom: 3px solid var(--dark);
     color: var(--text-on-dark);
 }
 
-    .about-section::before {
+    .about-section::before,
+    .about-section::after {
         content: "";
         position: absolute;
         inset: 0;
         z-index: -1;
-        opacity: 0.65;
-        background:
-            radial-gradient(circle at 8% 14%, rgba(247, 244, 238, 0.72) 0 2px, transparent 3px),
-            radial-gradient(circle at 26% 35%, rgba(247, 244, 238, 0.5) 0 1px, transparent 2px),
-            radial-gradient(circle at 48% 20%, rgba(247, 244, 238, 0.62) 0 2px, transparent 3px),
-            radial-gradient(circle at 74% 30%, rgba(247, 244, 238, 0.45) 0 1px, transparent 2px),
-            radial-gradient(circle at 92% 18%, rgba(247, 244, 238, 0.6) 0 2px, transparent 3px),
-            radial-gradient(circle at 18% 78%, rgba(247, 244, 238, 0.55) 0 2px, transparent 3px),
-            radial-gradient(circle at 56% 82%, rgba(247, 244, 238, 0.44) 0 1px, transparent 2px),
-            radial-gradient(circle at 88% 72%, rgba(247, 244, 238, 0.5) 0 2px, transparent 3px);
-        background-size: 420px 300px;
-        animation: starsMove 18s linear infinite;
+        pointer-events: none;
     }
 
-@keyframes starsMove {
+    .about-section::before {
+        opacity: 0.65;
+        background:
+            radial-gradient(circle at 8% 14%, rgba(247, 244, 238, 0.9) 0 2px, transparent 3px),
+            radial-gradient(circle at 26% 35%, rgba(247, 244, 238, 0.58) 0 1px, transparent 2px),
+            radial-gradient(circle at 48% 20%, rgba(247, 244, 238, 0.72) 0 2px, transparent 3px),
+            radial-gradient(circle at 74% 30%, rgba(247, 244, 238, 0.55) 0 1px, transparent 2px),
+            radial-gradient(circle at 92% 18%, rgba(247, 244, 238, 0.7) 0 2px, transparent 3px),
+            radial-gradient(circle at 18% 78%, rgba(247, 244, 238, 0.62) 0 2px, transparent 3px),
+            radial-gradient(circle at 56% 82%, rgba(247, 244, 238, 0.5) 0 1px, transparent 2px),
+            radial-gradient(circle at 88% 72%, rgba(247, 244, 238, 0.58) 0 2px, transparent 3px);
+        background-size: 430px 310px;
+        animation: starFieldMove 26s linear infinite;
+    }
+
+    .about-section::after {
+        opacity: 0.32;
+        background:
+            radial-gradient(circle at 12% 44%, rgba(247, 244, 238, 0.8) 0 1px, transparent 2px),
+            radial-gradient(circle at 38% 12%, rgba(247, 244, 238, 0.6) 0 1px, transparent 2px),
+            radial-gradient(circle at 64% 46%, rgba(247, 244, 238, 0.7) 0 2px, transparent 3px),
+            radial-gradient(circle at 82% 84%, rgba(247, 244, 238, 0.58) 0 1px, transparent 2px),
+            radial-gradient(circle at 30% 88%, rgba(247, 244, 238, 0.5) 0 2px, transparent 3px);
+        background-size: 260px 220px;
+        animation: starFieldMoveSoft 36s linear infinite;
+    }
+
+@keyframes starFieldMove {
     from {
         background-position: 0 0;
     }
 
     to {
-        background-position: 80px 140px;
+        background-position: 120px 180px;
+    }
+}
+
+@keyframes starFieldMoveSoft {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: -90px 130px;
     }
 }
 
@@ -281,6 +308,7 @@
 
 @media (prefers-reduced-motion: reduce) {
     .about-section::before,
+    .about-section::after,
     .avatar-glow,
     .avatar-ring,
     .floating-card {
