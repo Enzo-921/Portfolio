@@ -107,7 +107,12 @@ button {
     background: var(--header-bg);
     border-bottom: 1px solid var(--border);
     backdrop-filter: blur(18px);
+    transition: box-shadow var(--transition), background var(--transition);
 }
+
+    .site-header.scrolled {
+        box-shadow: 0 12px 34px rgba(34, 34, 34, 0.12);
+    }
 
 .navbar {
     min-height: 78px;
@@ -236,12 +241,28 @@ button {
     padding: 0.85rem 1.35rem;
     border-radius: 999px;
     font-weight: 800;
+    position: relative;
+    overflow: hidden;
     transition: transform var(--transition), background var(--transition), box-shadow var(--transition);
 }
+
+    .btn::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(247, 244, 238, 0.16);
+        opacity: 0;
+        transition: opacity var(--transition);
+        pointer-events: none;
+    }
 
     .btn:hover {
         transform: translateY(-2px);
         box-shadow: 0 14px 34px rgba(34, 34, 34, 0.16);
+    }
+
+    .btn:hover::after {
+        opacity: 1;
     }
 
     .btn i {
@@ -328,6 +349,16 @@ button {
     color: var(--dark);
     font-weight: 700;
 }
+
+    .footer-links a {
+        transition: color var(--transition), transform var(--transition), opacity var(--transition);
+    }
+
+    .footer-links a:hover {
+        color: var(--rose);
+        opacity: 1;
+        transform: translateY(-2px);
+    }
 
 .reveal {
     opacity: 0;

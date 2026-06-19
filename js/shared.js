@@ -67,6 +67,7 @@ updateScrollBar();
 
 const navBurger = document.querySelector(".nav-burger");
 const navLinks = document.querySelector(".nav-links");
+const siteHeader = document.querySelector(".site-header");
 
 if (navBurger && navLinks) {
     navBurger.addEventListener("click", () => {
@@ -76,6 +77,17 @@ if (navBurger && navLinks) {
         navBurger.setAttribute("aria-expanded", String(isOpen));
     });
 }
+
+function updateHeaderState() {
+    if (!siteHeader) {
+        return;
+    }
+
+    siteHeader.classList.toggle("scrolled", window.scrollY > 40);
+}
+
+window.addEventListener("scroll", updateHeaderState);
+updateHeaderState();
 
 const revealElements = document.querySelectorAll(
     ".hero-content, .hero-visual, .about-text, .about-cards, .featured-card, .page-hero .container, .project-card, .skill-category, .skill-card, .cv-side, .cv-block, .contact-card"
