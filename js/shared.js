@@ -133,7 +133,7 @@ if (canvas) {
             speedX: 0.025 + Math.random() * 0.12,
             speedY: 0.01 + Math.random() * 0.06,
             depth: 0.25 + Math.random() * 0.75,
-            opacity: 0.22 + Math.random() * 0.58,
+            opacity: 0.34 + Math.random() * 0.58,
             twinkle: Math.random() * Math.PI * 2,
             twinkleSpeed: 0.008 + Math.random() * 0.018,
             driftX: 0,
@@ -158,7 +158,7 @@ if (canvas) {
 
         return darkTheme
             ? `rgba(247, 244, 238, ${opacity})`
-            : `rgba(34, 34, 34, ${opacity * 0.72})`;
+            : `rgba(34, 34, 34, ${opacity * 0.86})`;
     }
 
     function glowColor(opacity) {
@@ -166,7 +166,7 @@ if (canvas) {
 
         return darkTheme
             ? `rgba(209, 168, 160, ${opacity})`
-            : `rgba(156, 147, 132, ${opacity * 0.7})`;
+            : `rgba(156, 147, 132, ${opacity * 0.82})`;
     }
 
     function drawParticle(particle) {
