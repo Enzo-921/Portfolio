@@ -40,15 +40,13 @@
 .cv-avatar {
     width: 126px;
     height: 126px;
-    display: grid;
-    place-items: center;
+    display: block;
     margin: 0 auto 18px;
     border-radius: 50%;
-    background: var(--taupe);
     border: 2px solid var(--border);
-    color: var(--dark);
-    font-size: 2.2rem;
-    font-weight: 1000;
+    object-fit: cover;
+    object-position: center 24%;
+    background: var(--taupe);
 }
 
 .cv-profile h2 {
