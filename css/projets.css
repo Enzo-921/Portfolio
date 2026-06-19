@@ -140,10 +140,12 @@
     background: radial-gradient(circle at 28% 34%, var(--rose-soft) 0 58px, transparent 60px), var(--bg-soft);
 }
 
+    .visual-si img,
     .visual-recueil img,
     .visual-bd img,
     .visual-notes img {
         object-fit: contain;
+        object-position: center;
         padding: 34px;
         background: rgba(247, 244, 238, 0.72);
     }
