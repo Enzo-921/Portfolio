@@ -35,48 +35,126 @@
     <main>
         <section class="page-hero">
             <div class="container">
-                <p class="section-label">Contact</p>
-                <h1>Me <span>contacter</span></h1>
-                <p>Une page simple pour centraliser les liens et les informations utiles.</p>
+                <p class="section-label">Restons en contact</p>
+                <h1>Parlons <span>projet</span></h1>
+                <p>Une page simple pour centraliser les liens, les informations utiles et faciliter une prise de contact.</p>
             </div>
         </section>
 
         <section class="contact-section">
             <div class="container contact-grid">
-                <div class="contact-card">
-                    <h2>Disponibilité</h2>
-                    <p>
-                        Je suis ouvert aux échanges autour de projets, de stages, d'alternance
-                        ou de sujets liés aux systèmes et réseaux.
-                    </p>
-
-                    <div class="contact-list">
-                        <a href="mailto:enzo.chauderon1@gmail.com">
-                            <i class="fa-solid fa-envelope"></i>
-                            enzo.chauderon1@gmail.com
-                        </a>
-                        <a href="#">
-                            <i class="fa-brands fa-linkedin"></i>
-                            LinkedIn à compléter
-                        </a>
-                        <a href="#">
-                            <i class="fa-brands fa-github"></i>
-                            GitHub à compléter
-                        </a>
+                <aside class="contact-info-card">
+                    <div>
+                        <p class="contact-eyebrow">Me retrouver</p>
+                        <h2>Disponible pour échanger</h2>
+                        <p>
+                            Je suis ouvert aux échanges autour de projets, de stages, d'alternance
+                            ou de sujets liés aux systèmes et réseaux.
+                        </p>
                     </div>
-                </div>
 
-                <div class="contact-card contact-note">
-                    <h2>À compléter</h2>
-                    <p>
-                        Tu pourras remplacer les liens par tes vrais contacts quand tu voudras.
-                        Pour l'instant, cette page reste volontairement simple et sans formulaire complexe.
-                    </p>
-                    <a href="mailto:enzo.chauderon1@gmail.com" class="btn btn-primary">
-                        <i class="fa-solid fa-paper-plane"></i>
-                        Envoyer un email
-                    </a>
+                    <div class="availability-pill">
+                        <span></span>
+                        Ouvert aux opportunités
+                    </div>
+
+                    <div class="contact-details">
+                        <a class="contact-detail" href="mailto:enzo.chauderon1@gmail.com">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>
+                                <strong>Email</strong>
+                                enzo.chauderon1@gmail.com
+                            </span>
+                        </a>
+                        <a class="contact-detail" href="https://www.linkedin.com/in/enzo-chauderon-080507392/" target="_blank" rel="noopener">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                            <span>
+                                <strong>LinkedIn</strong>
+                                linkedin.com/in/enzo-chauderon-080507392
+                            </span>
+                        </a>
+                        <a class="contact-detail" href="https://github.com/Enzo-921" target="_blank" rel="noopener">
+                            <i class="fa-brands fa-github"></i>
+                            <span>
+                                <strong>GitHub</strong>
+                                github.com/Enzo-921
+                            </span>
+                        </a>
+                        <div class="contact-detail">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>
+                                <strong>Localisation</strong>
+                                France
+                            </span>
+                        </div>
+                    </div>
+                </aside>
+
+                <div class="contact-form-card">
+                    <div class="form-heading">
+                        <p class="contact-eyebrow">Message</p>
+                        <h2>Envoyer un email</h2>
+                        <p>Le formulaire prépare un message dans ton application mail, sans script supplémentaire.</p>
+                    </div>
+
+                    <form action="mailto:enzo.chauderon1@gmail.com" method="post" enctype="text/plain">
+                        <div class="form-row">
+                            <label>
+                                Nom
+                                <span class="input-wrap">
+                                    <i class="fa-solid fa-user"></i>
+                                    <input type="text" name="Nom" placeholder="Votre nom">
+                                </span>
+                            </label>
+                            <label>
+                                Email
+                                <span class="input-wrap">
+                                    <i class="fa-solid fa-envelope"></i>
+                                    <input type="email" name="Email" placeholder="votre@email.com">
+                                </span>
+                            </label>
+                        </div>
+
+                        <label>
+                            Sujet
+                            <span class="input-wrap">
+                                <i class="fa-solid fa-tag"></i>
+                                <input type="text" name="Sujet" placeholder="Stage / projet / question">
+                            </span>
+                        </label>
+
+                        <label>
+                            Message
+                            <span class="input-wrap textarea-wrap">
+                                <i class="fa-solid fa-message"></i>
+                                <textarea name="Message" rows="6" placeholder="Décrivez votre demande..."></textarea>
+                            </span>
+                        </label>
+
+                        <button type="submit" class="btn btn-primary submit-btn">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            Préparer l'email
+                        </button>
+                    </form>
                 </div>
+            </div>
+
+            <div class="container contact-soft-skills">
+                <article>
+                    <i class="fa-solid fa-handshake"></i>
+                    <h3>Sérieux</h3>
+                    <p>Envie de produire un travail propre et compréhensible.</p>
+                </article>
+                <article>
+                    <i class="fa-solid fa-people-arrows"></i>
+                    <h3>Écoute</h3>
+                    <p>Attention aux besoins, aux retours et aux contraintes d'un projet.</p>
+                </article>
+                <article>
+                    <i class="fa-solid fa-route"></i>
+                    <h3>Progression</h3>
+                    <p>Approche étape par étape pour apprendre sans brûler les bases.</p>
+                </article>
             </div>
         </section>
     </main>
@@ -85,7 +163,7 @@
         <div class="container footer-content">
             <div class="footer-brand">
                 <a href="../index.html" class="nav-logo">ENZO<span>.DEV</span></a>
-                <p>Contact simple et direct, à compléter avec tes vrais liens.</p>
+                <p>Contact simple et direct, avec mes principaux liens.</p>
             </div>
             <nav class="footer-links" aria-label="Navigation secondaire">
                 <a href="../index.html">Accueil</a>
