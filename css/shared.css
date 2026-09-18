@@ -20,38 +20,6 @@
     color-scheme: light;
 }
 
-@font-face {
-    font-family: "Montserrat";
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url("../fonts/Montserrat-400.ttf") format("truetype");
-}
-
-@font-face {
-    font-family: "Montserrat";
-    font-style: normal;
-    font-weight: 500;
-    font-display: swap;
-    src: url("../fonts/Montserrat-500.ttf") format("truetype");
-}
-
-@font-face {
-    font-family: "Montserrat";
-    font-style: normal;
-    font-weight: 600;
-    font-display: swap;
-    src: url("../fonts/Montserrat-600.ttf") format("truetype");
-}
-
-@font-face {
-    font-family: "Montserrat";
-    font-style: normal;
-    font-weight: 700;
-    font-display: swap;
-    src: url("../fonts/Montserrat-700.ttf") format("truetype");
-}
-
 [data-theme="dark"] {
     --bg: #11131a;
     --bg-soft: #1c2028;
@@ -89,13 +57,6 @@ body {
     font-weight: 600;
     line-height: 1.6;
     transition: background var(--transition), color var(--transition);
-}
-
-button,
-input,
-textarea,
-select {
-    font-family: inherit;
 }
 
 a {
